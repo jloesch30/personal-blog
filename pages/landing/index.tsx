@@ -1,10 +1,13 @@
 import Heading from "../../components/landing/header";
+import Nav from "../../components/nav";
 
 const Landing = () => {
   return (
     <>
-      <Heading></Heading>
-      <div>Hello there</div>
+      <Nav />
+      <div>
+        <Heading />
+      </div>
     </>
   );
 };

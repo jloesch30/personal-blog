@@ -3,25 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "docker compose up -d --remove-orphans && NODE_OPTIONS='--inspect' next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
-    "start": "next start && docker compose up -d --remove-orphans",
-    "lint": "next lint",
-    "db": "docker compose up -d --remove-orphans"
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "resolutions": {
+    "style-components": "^5"
   },
   "dependencies": {
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-spring": "^9.5.2",
+    "sass": "^1.54.9",
+    "scss": "^0.2.4",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@testing-library/react": "^13.2.0",
     "@types/node": "18.7.8",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
+    "@types/styled-components": "^5.1.26",
+    "@vitejs/plugin-react": "latest",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
-    "@testing-library/react": "^13.2.0",
-    "@vitejs/plugin-react": "latest",
     "jsdom": "latest",
     "typescript": "4.6.3",
     "vitest": "latest"
