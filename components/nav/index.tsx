@@ -1,5 +1,3 @@
-import { useSpring } from "react-spring";
-
 const Nav = () => {
   return (
     <ul>
