@@ -23,7 +23,7 @@ const Div = styled.div<IProps>`
   flex-direction: column;
   gap: 10px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 430px) {
     display: grid;
     grid-template-columns: 40% 60%;
     background-color: ${(props) => props.theme.palette.primary.main};
