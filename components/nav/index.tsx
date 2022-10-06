@@ -45,6 +45,7 @@ const Ul = styled.ul`
   justify-content: center;
   background-color: #fff0db;
   border-radius: 32px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
   margin-inline: auto;
   margin-bottom: 0.5em;
   width: 200px;
