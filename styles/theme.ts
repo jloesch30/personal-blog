@@ -19,4 +19,24 @@ export const theme: DefaultTheme = {
       contrastText: "#ffffff",
     },
   },
+  typography: {
+    landing: {
+      h1: {
+        fontSize: "7em",
+        fontWeight: "bold",
+        color: "#eb583f",
+      },
+      h2: {
+        fontSize: "6em",
+        fontWeight: "bold",
+      },
+    },
+    base: {
+      h1: {
+        fontSize: "2em",
+        fontWeight: 700,
+        color: "#eb583f",
+      },
+    },
+  },
 };

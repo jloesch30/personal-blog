@@ -19,5 +19,25 @@ declare module "styled-components" {
       primary: IPalette;
       secondary: IPalette;
     };
+    typography: {
+      landing: {
+        h1: {
+          fontSize: string;
+          fontWeight: string;
+          color: string;
+        };
+        h2: {
+          fontSize: string;
+          fontWeight: string;
+        };
+      };
+      base: {
+        h1: {
+          fontSize: string;
+          fontWeight: number;
+          color: string;
+        };
+      };
+    };
   }
 }

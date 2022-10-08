@@ -19,21 +19,21 @@ const Div = styled.div`
 
 const H1 = styled.h1`
   text-shadow: -10px 7px 0px rgba(0, 0, 0, 0.1);
-  color: #eb583f;
+  color: ${(props) => props.theme.typography.landing.h1.color};
   font-family: "Bungee";
   font-style: normal;
   font-weight: bolder;
-  font-size: 128px;
+  font-size: ${(props) => props.theme.typography.landing.h1.fontSize};
   margin-left: 0.2em;
 `;
 
 const H2 = styled.h1`
-  align-self: center;
   font-family: "Bungee Shade";
   font-style: normal;
-  font-weight: 400;
-  font-size: 128px;
-  line-height: 154px;
+  font-weight: normal;
+  font-size: ${(props) => props.theme.typography.landing.h2.fontSize};
+  margin: auto;
+  line-height: 0.8em;
 `;
 
 export default Heading;
