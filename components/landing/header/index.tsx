@@ -4,7 +4,7 @@ const Heading = () => {
   return (
     <>
       <Div>
-        <H1>I'm</H1>
+        <H1>I&apos;m</H1>
         <H2>Josh</H2>
       </Div>
     </>
