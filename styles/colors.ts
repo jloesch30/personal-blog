@@ -1,0 +1,3 @@
+const BACKGROUND_COLOR = "#ECEAE7";
+
+export { BACKGROUND_COLOR };
