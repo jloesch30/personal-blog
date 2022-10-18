@@ -6,11 +6,11 @@ import Nav from "../components/nav";
 const Custom404 = () => {
   const router = useRouter();
 
-  useEffect(() => {
-    setTimeout(() => {
-      router.push("/");
-    }, 1000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     router.push("/");
+  //   }, 1000);
+  // }, []);
 
   return (
     <>

@@ -52,7 +52,7 @@ const Ul = styled.ul`
 
   li {
     padding-block: 1rem;
-    &::marker {
+    ::marker {
       content: "";
     }
   }
