@@ -39,4 +39,13 @@ export const theme: DefaultTheme = {
       },
     },
   },
+  spacing: {
+    blog: {
+      content: {
+        mobile: {
+          marginInline: "3rem",
+        },
+      },
+    },
+  },
 };

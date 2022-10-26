@@ -39,5 +39,14 @@ declare module "styled-components" {
         };
       };
     };
+    spacing: {
+      blog: {
+        content: {
+          mobile: {
+            marginInline: string;
+          };
+        };
+      };
+    };
   }
 }

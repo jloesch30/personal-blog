@@ -1,16 +1,21 @@
-import React, { FC } from "react";
+import React from "react";
 import styled from "styled-components";
 
 interface Props {
   children?: React.ReactNode;
+  props?: any;
 }
 
-const H1 = ({ children }: Props): JSX.Element => (
-  <StyledH1>{children}</StyledH1>
+const H1 = ({ children, props }: Props): JSX.Element => (
+  <StyledH1 {...props}>{children}</StyledH1>
 );
 
-const H2 = ({ children }: Props): JSX.Element => (
-  <StyledH2>{children}/</StyledH2>
+const H2 = ({ children, props }: Props): JSX.Element => (
+  <StyledH2 {...props}>{children}</StyledH2>
+);
+
+const H3 = ({ children, props }: Props): JSX.Element => (
+  <StyledH2 {...props}>{children}</StyledH2>
 );
 
 const StyledH1 = styled.h1`
@@ -22,4 +27,4 @@ const StyledH2 = styled.h1`
   color: red;
 `;
 
-export { H1, H2 };
+export { H1, H2, H3 };
