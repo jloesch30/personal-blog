@@ -2,15 +2,36 @@ import { bundleMDX } from "mdx-bundler";
 import path, { join } from "path";
 import { readdirSync, readFileSync } from "fs";
 import rehypePrism from "rehype-prism-plus";
+import matter from "gray-matter";
 
 export const ROOT = process.cwd();
 export const POSTS_PATH = path.join(ROOT, "/posts");
 
 const postDirectory = join(process.cwd(), "posts");
 
+export function getPostsGrayMatter() {
+  const contents = readdirSync(postDirectory);
+  const onlyFiles = contents.filter((name) => {
+    return name.endsWith(".mdx");
+  });
+  const allPostsData = onlyFiles.map((fileName) => {
+    const fullPath = path.join(postDirectory, fileName);
+    const fileContents = readFileSync(fullPath, "utf8");
+    const matterResult = matter(fileContents);
+    return {
+      slug: fileName.replace(/\.mdx$/, ""),
+      ...matterResult.data,
+    };
+  });
+  return allPostsData;
+}
+
 export function getAllPostSlugs() {
-  const fileNames = readdirSync(postDirectory);
-  return fileNames.map((fileName) => {
+  const contents = readdirSync(POSTS_PATH);
+  const onlyFiles = contents.filter((name) => {
+    return name.endsWith(".mdx");
+  });
+  return onlyFiles.map((fileName) => {
     return {
       params: {
         slug: fileName.replace(/\.mdx$/, ""),
