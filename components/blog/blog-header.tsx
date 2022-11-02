@@ -5,9 +5,6 @@ const BlogHeader = () => {
     <Div>
       <H1>What&apos;s</H1>
       <H2>New?</H2>
-      <section>
-        <ContentList />
-      </section>
     </Div>
   );
 };

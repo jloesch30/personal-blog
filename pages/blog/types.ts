@@ -5,4 +5,3 @@ export interface PostParams {
   category: string;
   description?: string;
 }
-[];

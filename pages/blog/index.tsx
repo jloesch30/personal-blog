@@ -1,39 +1,31 @@
 import Nav from "../../components/nav/nav";
-import { getPostsGrayMatter } from "../../lib/mdx";
+import { GetStaticProps, InferGetStaticPropsType } from "next/types";
 import { PostParams } from "./types";
+import { getPostsGrayMatter } from "../../lib/mdx";
+import { ContentList } from "../../components/blog/content-list";
+import { BlogHeader } from "../../components/blog";
 
-interface BlogHomeProps {
-  posts: PostParams[];
-}
-
-const BlogHome = ({ posts }: BlogHomeProps) => {
+const BlogHome = ({ posts }: { posts: PostParams[] }) => {
   return (
     <div>
-      <h1>Content</h1>
-      {posts.map((post) => {
-        console.log(post);
-        return (
-          <div>
-            <h2>{post.title}</h2>
-            <p>
-              <small>{post.description}</small>
-            </p>
-          </div>
-        );
-      })}
       <Nav />
+      <div>
+        <BlogHeader />
+        <ContentList posts={posts} />
+      </div>
     </div>
   );
 };
 
-// get all post slugs
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<{
+  posts: PostParams[];
+}> = async () => {
   const posts = getPostsGrayMatter();
   return {
     props: {
       posts,
     },
   };
-}
+};
 
 export default BlogHome;

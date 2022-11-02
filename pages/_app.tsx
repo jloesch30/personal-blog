@@ -5,13 +5,24 @@ import { theme } from "../styles/theme";
 import Head from "next/head";
 import { MDXProvider } from "@mdx-js/react";
 import Header from "../components/mdx/headers";
+import { Provider } from "jotai";
+import { GetStaticProps } from "next/types";
+import { PostParams } from "./blog/types";
+import { getPostsGrayMatter } from "../lib/mdx";
+import { useHydrateAtoms } from "jotai/utils";
+import { ContentListAtom } from "./blog/atoms";
 
 const components = {
   h1: Header.H1,
   h2: Header.H2,
 };
 
-function MyApp({ Component, pageProps }: AppProps) {
+interface BaseProps extends AppProps {
+  posts: PostParams[];
+}
+
+function MyApp({ Component, pageProps, posts }: BaseProps) {
+  console.log(posts);
   return (
     <>
       <Head>
