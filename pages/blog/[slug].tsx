@@ -30,7 +30,9 @@ const BlogPost: FC<BlogPostProps> = ({ code, frontmatter }) => {
 
   return (
     <div>
-      <h1>{frontmatter.title}</h1>
+      <TitleContainer>
+        <h1>{frontmatter.title}</h1>
+      </TitleContainer>
       <Div>
         <Component components={components} />
       </Div>
@@ -47,10 +49,21 @@ const Div = styled.div`
     props.theme.spacing.blog.content.mobile.marginInline};
 `;
 
+const TitleContainer = styled.h1`
+  border-radius: 0.5rem;
+  margin-inline: 1rem;
+  padding-block: 0.2rem;
+
+  h1 {
+    font-family: "Bungee Shade";
+    text-align: center;
+    margin-block: 0.2em;
+  }
+`;
+
 // eslint-disable-next-line require-await
 export async function getStaticPaths() {
   const paths = getAllPostSlugs();
-  console.log(paths);
   return {
     paths,
     fallback: false,
@@ -59,9 +72,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const postData = await getPostData(params.slug);
-
-  console.log(postData);
-
   return {
     props: {
       ...postData,

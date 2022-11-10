@@ -1,17 +1,7 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 import styled from "styled-components";
 import Nav from "../components/nav/nav";
 
 const Custom404 = () => {
-  const router = useRouter();
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     router.push("/");
-  //   }, 1000);
-  // }, []);
-
   return (
     <>
       <Nav />

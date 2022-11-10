@@ -15,6 +15,7 @@ declare module "styled-components" {
       common: {
         black: string;
         white: string;
+        gray: string;
       };
       primary: IPalette;
       secondary: IPalette;
@@ -33,6 +34,11 @@ declare module "styled-components" {
       };
       base: {
         h1: {
+          fontSize: string;
+          fontWeight: number;
+          color: string;
+        };
+        h2: {
           fontSize: string;
           fontWeight: number;
           color: string;

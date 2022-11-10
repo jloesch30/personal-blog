@@ -23,8 +23,9 @@ const StyledH1 = styled.h1`
   font-family: "Bungee";
 `;
 
-const StyledH2 = styled.h1`
-  color: red;
+const StyledH2 = styled.h2`
+  color: ${(props) => props.theme.typography.base.h2.color};
+  font-family: "Bungee";
 `;
 
 export { H1, H2, H3 };
