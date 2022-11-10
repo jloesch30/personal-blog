@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Heading from "../components/landing/header";
-import Nav from "../components/nav";
 import LandingContent from "../components/landing/content";
+import Nav from "../components/nav/nav";
 
 const Index = () => {
   return (

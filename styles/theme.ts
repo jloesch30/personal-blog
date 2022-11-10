@@ -9,6 +9,7 @@ export const theme: DefaultTheme = {
     common: {
       black: "#222831",
       white: "#ffffff",
+      gray: "#393e46",
     },
     primary: {
       main: "#726a95",
@@ -36,6 +37,20 @@ export const theme: DefaultTheme = {
         fontSize: "2em",
         fontWeight: 700,
         color: "#eb583f",
+      },
+      h2: {
+        fontSize: "1em",
+        fontWeight: 700,
+        color: "#393e46",
+      },
+    },
+  },
+  spacing: {
+    blog: {
+      content: {
+        mobile: {
+          marginInline: "3rem",
+        },
       },
     },
   },

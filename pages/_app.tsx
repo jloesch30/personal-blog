@@ -5,13 +5,18 @@ import { theme } from "../styles/theme";
 import Head from "next/head";
 import { MDXProvider } from "@mdx-js/react";
 import Header from "../components/mdx/headers";
+import { PostParams } from "./blog/types";
 
 const components = {
   h1: Header.H1,
   h2: Header.H2,
 };
 
-function MyApp({ Component, pageProps }: AppProps) {
+interface BaseProps extends AppProps {
+  posts: PostParams[];
+}
+
+function MyApp({ Component, pageProps, posts }: BaseProps) {
   return (
     <>
       <Head>
