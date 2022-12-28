@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { PostParams } from "../../pages/blog/types";
+import { PostParams } from "../../components//blog/types";
 
 const ContentList = ({ posts }: { posts: PostParams[] }) => {
   return (

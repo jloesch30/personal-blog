@@ -1,6 +1,6 @@
 import Nav from "../../components/nav/nav";
 import { GetStaticProps } from "next/types";
-import { PostParams } from "./types";
+import { PostParams } from "../../components/blog/types";
 import { getPostsGrayMatter } from "../../lib/mdx";
 import { ContentList } from "../../components/blog/content-list";
 import { BlogHeader } from "../../components/blog";
