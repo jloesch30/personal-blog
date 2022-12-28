@@ -17,15 +17,16 @@ const Index = () => {
   );
 };
 
-// This is how you pass props
 const Div = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
 
-  @media screen and (min-width: 430px) {
+  @media screen and (min-width: 750px) {
     display: grid;
     grid-template-columns: 40% 60%;
+    padding-block: 2rem;
+    box-shadow: 0px 0px 10px 5px grey;
     background-color: ${(props) => props.theme.palette.primary.main};
   }
 `;

@@ -6,6 +6,7 @@ import { getPostData, getAllPostSlugs } from "../../lib/mdx";
 import Link from "next/link";
 import Image from "next/image";
 import { Router } from "next/router";
+import Nav from "../../components/nav/nav";
 
 interface BlogPostProps {
   code: string;
@@ -30,6 +31,7 @@ const BlogPost: FC<BlogPostProps> = ({ code, frontmatter }) => {
 
   return (
     <div>
+      <Nav />
       <TitleContainer>
         <h1>{frontmatter.title}</h1>
       </TitleContainer>
