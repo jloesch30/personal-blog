@@ -25,6 +25,13 @@ const ContentList = ({ posts }: { posts: PostParams[] }) => {
 const Div = styled.div`
   display: grid;
   margin-inline: 3em;
+
+  @media screen and (min-width: 580px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const A = styled.a`
@@ -35,6 +42,11 @@ const A = styled.a`
   transition: 0.2s ease-in-out;
   &:hover {
     transform: scale(1.05);
+    color: ${(props) => props.theme.palette.secondary.main};
+  }
+
+  @media screen and (min-width: 580px) {
+    font-size: 2em;
   }
 `;
 

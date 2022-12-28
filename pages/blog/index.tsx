@@ -1,5 +1,5 @@
 import Nav from "../../components/nav/nav";
-import { GetStaticProps, InferGetStaticPropsType } from "next/types";
+import { GetStaticProps } from "next/types";
 import { PostParams } from "./types";
 import { getPostsGrayMatter } from "../../lib/mdx";
 import { ContentList } from "../../components/blog/content-list";
@@ -19,7 +19,7 @@ const BlogHome = ({ posts }: { posts: PostParams[] }) => {
 
 export const getStaticProps: GetStaticProps<{
   posts: PostParams[];
-}> = async () => {
+}> = () => {
   const posts = getPostsGrayMatter();
   return {
     props: {
