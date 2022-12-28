@@ -20,7 +20,10 @@ export function getPostsGrayMatter() {
     const matterResult = matter(fileContents);
     return {
       slug: fileName.replace(/\.mdx$/, ""),
-      ...matterResult.data,
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      category: matterResult.data.category,
+      description: matterResult.data.description,
     };
   });
   return allPostsData;
