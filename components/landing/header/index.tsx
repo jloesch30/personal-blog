@@ -32,7 +32,6 @@ const H2 = styled.h1`
   font-style: normal;
   font-weight: normal;
   font-size: ${(props) => props.theme.typography.landing.h2.fontSize};
-  margin: auto;
   line-height: 0.8em;
 `;
 

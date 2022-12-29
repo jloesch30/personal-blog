@@ -30,25 +30,34 @@ const BlogPost: FC<BlogPostProps> = ({ code, frontmatter }) => {
   );
 
   return (
-    <div>
+    <>
       <Nav />
       <TitleContainer>
         <h1>{frontmatter.title}</h1>
       </TitleContainer>
-      <Div>
-        <Component components={components} />
-      </Div>
-    </div>
+      <MDXContainer>
+        <div>
+          <Component components={components} />
+        </div>
+      </MDXContainer>
+    </>
   );
 };
 
 export default BlogPost;
 
-const Div = styled.div`
+const MDXContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-inline: ${(props) =>
-    props.theme.spacing.blog.content.mobile.marginInline};
+  align-items: center;
+  justify-content: center;
+
+  > div:first-child {
+    margin-inline: 4rem;
+    max-width: 1000px;
+    margin-inline: ${(props) =>
+      props.theme.spacing.blog.content.mobile.marginInline};
+  }
 `;
 
 const TitleContainer = styled.h1`
