@@ -4,7 +4,7 @@ import { Form as ConnectForm } from "../../components/connect/form";
 
 const Connect = () => {
   return (
-    <div>
+    <ConnectContainer>
       <Nav />
       <Content>
         <Headers>
@@ -14,15 +14,24 @@ const Connect = () => {
         </Headers>
         <ConnectForm />
       </Content>
-    </div>
+    </ConnectContainer>
   );
 };
 
+const ConnectContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Content = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 2rem;
   margin-inline: 2rem;
+  max-width: 500px;
 `;
 
 const Headers = styled.div`

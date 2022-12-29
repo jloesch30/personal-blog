@@ -20,10 +20,14 @@ const Index = () => {
         <StyledBody>
           <h1>What am I up to?</h1>
           <p>
-            I am currently a Fullstack Software Engineer working with{" "}
+            I am currently a Fullstack Software Engineer in Austin, TX working
+            with{" "}
             <Link href={"https://www.srpatx.com"} target="_blank">
               Stronghold Resource Partners.
-            </Link>
+            </Link>{" "}
+            My work consits of building out core business applications and
+            integrate them with various business units. In my spare time, I
+            enjoy developing freelance applications or dabbling in photography.
           </p>
         </StyledBody>
       </div>
@@ -55,6 +59,11 @@ const StyledBody = styled.div`
   margin-inline: 10%;
   max-width: 1500px;
   margin-bottom: 10rem;
+
+  > h1 {
+    color: ${(props) => props.theme.palette.common.black};
+    margin-bottom: 0.25em;
+  }
 `;
 
 export default Index;

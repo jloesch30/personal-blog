@@ -1,9 +1,15 @@
+import { FormEvent } from "react";
 import styled from "styled-components";
 
 const Form = () => {
+  const submitForm = (e: FormEvent) => {
+    e.preventDefault();
+    console.log("Form does not work yet :(");
+  };
+
   return (
     <>
-      <InputForm action="submit">
+      <InputForm action="submit" onSubmit={submitForm}>
         <FieldSet>
           <Legend>Name</Legend>
           <div>
