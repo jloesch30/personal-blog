@@ -5,29 +5,23 @@ import { MailOutline, ListOutline, HomeOutline } from "react-ionicons";
 const Nav = () => {
   return (
     <NavContainer>
-      <Ul>
-        <li>
-          <Link href={"/"}>
-            <a>
-              <StyledHome />{" "}
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/blog"}>
-            <a>
-              <StyledList />{" "}
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/connect"}>
-            <a>
-              <StyledMail />{" "}
-            </a>
-          </Link>
-        </li>
-      </Ul>
+      <Div>
+        <Link href={"/"}>
+          <a>
+            <StyledHome />{" "}
+          </a>
+        </Link>
+        <Link href={"/blog"}>
+          <a>
+            <StyledList />{" "}
+          </a>
+        </Link>
+        <Link href={"/connect"}>
+          <a>
+            <StyledMail />{" "}
+          </a>
+        </Link>
+      </Div>
     </NavContainer>
   );
 };
@@ -38,7 +32,7 @@ const NavContainer = styled.div`
   width: 100%;
 `;
 
-const Ul = styled.ul`
+const Div = styled.div`
   display: flex;
   gap: 30px;
   align-items: center;
@@ -49,13 +43,7 @@ const Ul = styled.ul`
   margin-inline: auto;
   margin-bottom: 0.5em;
   width: 200px;
-
-  li {
-    padding-block: 1rem;
-    ::marker {
-      content: "";
-    }
-  }
+  padding: 1em;
 `;
 
 const StyledList = styled(ListOutline)`
