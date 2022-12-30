@@ -3,8 +3,6 @@ import Heading from "../components/landing/header";
 import LandingContent from "../components/landing/content";
 import Nav from "../components/nav/nav";
 import Link from "next/link";
-import logo from "../assets/logo-srp.png";
-import Image from "next/image";
 
 const Index = () => {
   return (
@@ -18,17 +16,27 @@ const Index = () => {
           </div>
         </StyledHeaderContainer>
         <StyledBody>
-          <h1>What am I up to?</h1>
-          <p>
-            I am currently a Fullstack Software Engineer in Austin, TX working
-            with{" "}
-            <Link href={"https://www.srpatx.com"} target="_blank">
-              Stronghold Resource Partners.
-            </Link>{" "}
-            My work consits of building out core business applications and
-            integrate them with various business units. In my spare time, I
-            enjoy developing freelance applications or dabbling in photography.
-          </p>
+          <div>
+            <h1>What am I up to?</h1>
+            <p>
+              I am currently a Fullstack Software Engineer in Austin, TX working
+              with{" "}
+              <Link href={"https://www.srpatx.com"} target="_blank">
+                Stronghold Resource Partners.
+              </Link>{" "}
+              My work consits of building out core business applications and
+              integrating them with various business units. In my spare time, I
+              enjoy developing freelance applications or dabbling in
+              photography.
+            </p>
+          </div>
+          <div>
+            <h1>Some of the things I work with...</h1>
+            <p>
+              Python, Ruby, Typescript, Javascript, SQL, Azure, Kafka, Redis,
+              etc..
+            </p>
+          </div>
         </StyledBody>
       </div>
     </>
@@ -36,6 +44,10 @@ const Index = () => {
 };
 
 const StyledHeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media screen and (min-width: 750px) {
     background-color: ${(props) => props.theme.palette.primary.main};
     box-shadow: 0px 0px 10px 5px grey;
@@ -55,14 +67,21 @@ const StyledHeaderContainer = styled.div`
 `;
 
 const StyledBody = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-top: 3rem;
-  margin-inline: 10%;
   max-width: 1500px;
+  margin: 2rem auto !important;
   margin-bottom: 10rem;
 
-  > h1 {
-    color: ${(props) => props.theme.palette.common.black};
-    margin-bottom: 0.25em;
+  > div {
+    margin-inline: 10%;
+    margin-top: 2rem;
+
+    > h1 {
+      color: ${(props) => props.theme.palette.common.black};
+      margin-bottom: 0.25em;
+    }
   }
 `;
 
