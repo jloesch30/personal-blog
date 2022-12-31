@@ -28,6 +28,7 @@ const Nav = () => {
 
 const NavContainer = styled.div`
   position: fixed; /* positioned absolute to its parent */
+  z-index: 1;
   bottom: 0px;
   width: 100%;
 `;

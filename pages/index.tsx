@@ -3,6 +3,8 @@ import Heading from "../components/landing/header";
 import LandingContent from "../components/landing/content";
 import Nav from "../components/nav/nav";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "assets/logos.png";
 
 const Index = () => {
   return (
@@ -36,6 +38,9 @@ const Index = () => {
               Python, Ruby, Typescript, Javascript, SQL, Azure, Kafka, Redis,
               etc..
             </p>
+            <ImageWrapper>
+              <Image src={logo} height={350} width={350} alt="logos" />
+            </ImageWrapper>
           </div>
         </StyledBody>
       </div>
@@ -86,6 +91,13 @@ const StyledBody = styled.div`
   > div:last-child {
     margin-bottom: 6rem;
   }
+`;
+
+const ImageWrapper = styled.div`
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default Index;
