@@ -1,11 +1,11 @@
 import type { AppProps } from "next/app";
-import { GlobalStyles } from "../styles/global";
+import { GlobalStyles } from "styles/global";
 import { ThemeProvider } from "styled-components";
-import { theme } from "../styles/theme";
+import { theme } from "styles/theme";
 import Head from "next/head";
 import { MDXProvider } from "@mdx-js/react";
-import Header from "../components/mdx/headers";
-import { PostParams } from "../components/blog/types";
+import Header from "components/mdx/headers";
+import { PostParams } from "components/blog/types";
 
 const components = {
   h1: Header.H1,

@@ -1,10 +1,37 @@
 import { FormEvent } from "react";
 import styled from "styled-components";
+import { useFormInput } from "hooks";
 
 const Form = () => {
+  const { value: nameValue, onChange: onNameChange } = useFormInput("");
+  const { value: emailValue, onChange: onEmailChange } = useFormInput("");
+  const { value: messageValue, onChange: onMessageChange } = useFormInput("");
+
   const submitForm = (e: FormEvent) => {
     e.preventDefault();
-    console.log("Form does not work yet :(");
+
+    const data = {
+      name: nameValue,
+      email: emailValue,
+      message: messageValue,
+    };
+
+    fetch("/api/connect", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        alert("Message sent!");
+      } else {
+        alert("Message failed to send.");
+      }
+      onNameChange("");
+      onEmailChange("");
+      onMessageChange("");
+    });
   };
 
   return (
@@ -13,19 +40,19 @@ const Form = () => {
         <FieldSet>
           <Legend>Name</Legend>
           <div>
-            <input type="text" />
+            <input type="text" onChange={onNameChange} value={nameValue} />
           </div>
         </FieldSet>
         <FieldSet>
           <Legend>Email</Legend>
           <div>
-            <input type="text" />
+            <input type="text" onChange={onEmailChange} value={emailValue} />
           </div>
         </FieldSet>
         <FieldSet>
           <Legend>Message</Legend>
           <div>
-            <textarea />
+            <textarea onChange={onMessageChange} value={messageValue} />
           </div>
         </FieldSet>
         <button type="submit">Send!</button>
