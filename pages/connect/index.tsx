@@ -12,7 +12,9 @@ const Connect = () => {
           <H2>With me!</H2>
           <p>Feel free to reach out</p>
         </Headers>
-        <ConnectForm />
+        <div id="connect-form">
+          <ConnectForm />
+        </div>
       </Content>
     </ConnectContainer>
   );
@@ -32,6 +34,10 @@ const Content = styled.div`
   gap: 2rem;
   margin-inline: 2rem;
   max-width: 500px;
+
+  div#connect-form {
+    margin-inline: 1rem;
+  }
 `;
 
 const Headers = styled.div`

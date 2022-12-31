@@ -69,9 +69,8 @@ const StyledHeaderContainer = styled.div`
 const StyledBody = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
   max-width: 1500px;
-  margin: 2rem auto !important;
+  margin: 0rem auto !important;
   margin-bottom: 10rem;
 
   > div {
@@ -82,6 +81,10 @@ const StyledBody = styled.div`
       color: ${(props) => props.theme.palette.common.black};
       margin-bottom: 0.25em;
     }
+  }
+
+  > div:last-child {
+    margin-bottom: 6rem;
   }
 `;
 
